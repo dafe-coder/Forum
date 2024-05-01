@@ -10,3 +10,23 @@
 		@apply text-blue-800;
 	}
 }
+
+*::-webkit-scrollbar {
+	width: 2px; /* width of the entire scrollbar */
+	height: 2px;
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent; /* color of the tracking area */
+}
+
+*::-webkit-scrollbar-thumb {
+	@apply bg-gray-300;
+	border-radius: 20px; /* roundness of the scroll thumb */
+	border: none; /* creates padding around scroll thumb */
+}
+
+body {
+	scrollbar-width: thin; /* "auto" or "thin" */
+	scrollbar-color: #eaeef5 transparent; /* scroll thumb and track */
+}

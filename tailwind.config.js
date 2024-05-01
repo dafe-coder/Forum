@@ -33,7 +33,6 @@ module.exports = {
 				500: '#3D3D46',
 			},
 			gray: {
-				...colors.gray,
 				300: '#EAEEF5',
 				400: '#EDEDED',
 				500: '#BDBDBD',
