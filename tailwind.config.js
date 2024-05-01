@@ -24,6 +24,20 @@ module.exports = {
 				25: '6.25rem', // 100px
 				37: '9.375rem', // 150px
 			},
+			animation: {
+				fade: 'fadeIn .3s ease-in-out forwards',
+				fadeOut: 'fadeOut .3s ease-in-out forwards',
+			},
+			keyframes: {
+				fadeIn: {
+					from: { opacity: 0 },
+					to: { opacity: 1 },
+				},
+				fadeOut: {
+					from: { opacity: 1 },
+					to: { opacity: 0 },
+				},
+			},
 		},
 		colors: {
 			white: colors.white,

@@ -31,7 +31,7 @@
 				<ul
 					class="flex space-x-10 mr-6 text-nowrap max-md:overflow-x-scroll max-md:space-x-4 max-sm:mr-2"
 				>
-					<li>
+					<li class="select-link relative">
 						<a
 							href="#"
 							class="flex items-center text-blue-800 transition-all hover:scale-105"
@@ -63,8 +63,33 @@
 								/>
 							</svg>
 						</a>
+						<ul
+							class="text-xs bg-white py-3 px-4 absolute left-0 top-[calc(100%+1.125rem)] z-10 border-gray-300 border min-w-full space-y-2 hidden opacity-0"
+						>
+							<li>
+								<a
+									href="#"
+									class="text-blue-800 transition-colors hover:text-violet-600"
+									>Support 1</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="text-blue-800 transition-colors hover:text-violet-600"
+									>Support 2</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="text-blue-800 transition-colors hover:text-violet-600"
+									>Support 1</a
+								>
+							</li>
+						</ul>
 					</li>
-					<li>
+					<li class="select-link relative" id="select-tag">
 						<a
 							href="#"
 							class="flex items-center text-blue-800 transition-all hover:scale-105"
@@ -95,6 +120,31 @@
 								/>
 							</svg>
 						</a>
+						<ul
+							class="text-xs bg-white py-3 px-4 absolute left-0 top-[calc(100%+1.125rem)] z-10 border-gray-300 border min-w-full space-y-2 hidden opacity-0"
+						>
+							<li>
+								<a
+									href="#"
+									class="text-blue-800 transition-colors hover:text-violet-600"
+									>Tag 1</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="text-blue-800 transition-colors hover:text-violet-600"
+									>Tag 2</a
+								>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="text-blue-800 transition-colors hover:text-violet-600"
+									>Tag 1</a
+								>
+							</li>
+						</ul>
 					</li>
 					<li>
 						<a
@@ -422,4 +472,34 @@
 			</div>
 		</div>
 	</body>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			const selectLinks = document.querySelectorAll('.select-link')
+			selectLinks.forEach(item => {
+				item.addEventListener('click', e => {
+					e.preventDefault()
+					if (!item.classList.contains('expand')) {
+						selectLinks.forEach(item => {
+							item.classList.remove('expand')
+							item.querySelector('ul').style.display = 'none'
+							item.querySelector('ul').classList.remove('animate-fade')
+							item.querySelector('ul').classList.remove('animate-fadeOut')
+						})
+						item.classList.add('expand')
+						item.querySelector('ul').style.display = 'block'
+						setTimeout(() => {
+							item.querySelector('ul').classList.add('animate-fade')
+						}, 10)
+					} else {
+						item.classList.remove('expand')
+						item.querySelector('ul').classList.remove('animate-fade')
+						item.querySelector('ul').classList.add('animate-fadeOut')
+						setTimeout(() => {
+							item.querySelector('ul').style.display = 'none'
+						}, 300)
+					}
+				})
+			})
+		})
+	</script>
 </html>
