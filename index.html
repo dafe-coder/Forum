@@ -27,17 +27,19 @@
 			<div class="flex pt-20">
 				<button class="btn-primary ml-auto max-sm:m-auto">+ New Topic</button>
 			</div>
-			<div class="flex py-3.5 mt-10 border-b-[5px] border-gray-300">
+			<div
+				class="flex py-3.5 mt-10 border-b-[5px] border-gray-300 max-sm:flex-wrap"
+			>
 				<ul
-					class="flex space-x-10 mr-6 text-nowrap max-md:overflow-x-scroll max-md:space-x-4 max-sm:mr-2"
+					class="flex text-sm gap-10 mr-6 text-nowrap max-md:gap-4 max-sm:mr-2 max-sm:mb-6 max-xs:flex-wrap max-xs:justify-center max-xs:mr-0"
 				>
-					<li class="select-link relative">
+					<li class="select-link relative max-xs:basis-[47%]">
 						<a
 							href="#"
 							class="flex items-center text-blue-800 transition-all hover:scale-105"
 						>
 							<div class="circle-sm mr-2"></div>
-							<span class="mr-1 text-sm">Support</span>
+							<span class="mr-1">Support</span>
 							<svg
 								width="11.000000"
 								height="8.000000"
@@ -64,7 +66,7 @@
 							</svg>
 						</a>
 						<ul
-							class="text-xs bg-white py-3 px-4 absolute left-0 top-[calc(100%+1.125rem)] z-10 border-gray-300 border min-w-full space-y-2 hidden opacity-0"
+							class="text-xs bg-white py-3 px-4 absolute left-0 top-[calc(100%+1.125rem)] z-10 border-gray-300 border min-w-full space-y-2 hidden opacity-0 max-sm:top-[calc(100%+10px)]"
 						>
 							<li>
 								<a
@@ -89,12 +91,12 @@
 							</li>
 						</ul>
 					</li>
-					<li class="select-link relative" id="select-tag">
+					<li class="select-link relative max-xs:basis-[47%]" id="select-tag">
 						<a
 							href="#"
-							class="flex items-center text-blue-800 transition-all hover:scale-105"
+							class="flex items-center text-blue-800 transition-all hover:scale-105 max-xs:justify-end"
 						>
-							<span class="mr-1 text-sm">All tags</span>
+							<span class="mr-1">All tags</span>
 							<svg
 								width="11.000000"
 								height="8.000000"
@@ -121,7 +123,7 @@
 							</svg>
 						</a>
 						<ul
-							class="text-xs bg-white py-3 px-4 absolute left-0 top-[calc(100%+1.125rem)] z-10 border-gray-300 border min-w-full space-y-2 hidden opacity-0"
+							class="text-xs bg-white py-3 px-4 absolute left-0 top-[calc(100%+1.125rem)] z-10 border-gray-300 border min-w-full space-y-2 hidden opacity-0 max-sm:top-[calc(100%+10px)]"
 						>
 							<li>
 								<a
@@ -146,12 +148,12 @@
 							</li>
 						</ul>
 					</li>
-					<li>
+					<li class="">
 						<a
 							href="#"
 							class="flex items-center text-blue-800 transition-all hover:scale-105"
 						>
-							<span class="mr-1 text-sm">Latest</span>
+							<span class="mr-1">Latest</span>
 						</a>
 					</li>
 					<li>
@@ -159,7 +161,7 @@
 							href="#"
 							class="flex items-center text-blue-800 transition-all hover:scale-105"
 						>
-							<span class="mr-1 text-sm">New (23)</span>
+							<span class="mr-1">New (23)</span>
 						</a>
 					</li>
 					<li>
@@ -167,7 +169,7 @@
 							href="#"
 							class="flex items-center text-blue-800 transition-all hover:scale-105"
 						>
-							<span class="mr-1 text-sm">Unread (12)</span>
+							<span class="mr-1">Unread (12)</span>
 						</a>
 					</li>
 				</ul>
